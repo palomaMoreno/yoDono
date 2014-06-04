@@ -1,0 +1,128 @@
+Articulo:
+  connection: doctrine
+  tableName: articulo
+  columns:
+    id_articulo:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    nombre:
+      type: string(30)
+      fixed: true
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    descripcion:
+      type: string(40)
+      fixed: true
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    localidad:
+      type: string(40)
+      fixed: true
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    fecha_alta:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    esta_activo:
+      type: integer(1)
+      fixed: false
+      unsigned: true
+      primary: false
+      notnull: true
+      autoincrement: false
+    cod_categoria:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    cod_usuario:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+Categoria:
+  connection: doctrine
+  tableName: categoria
+  columns:
+    id_categoria:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    nombre:
+      type: string(30)
+      fixed: true
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    esta_activa:
+      type: integer(1)
+      fixed: false
+      unsigned: true
+      primary: false
+      notnull: true
+      autoincrement: false
+Usuario:
+  connection: doctrine
+  tableName: usuario
+  columns:
+    id_usuario:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    nombre:
+      type: string(30)
+      fixed: true
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    email:
+      type: string(40)
+      fixed: true
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    fecha_alta:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    esta_activo:
+      type: integer(1)
+      fixed: false
+      unsigned: true
+      primary: false
+      notnull: true
+      autoincrement: false
+    password:
+      type: string(10)
+      fixed: true
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false

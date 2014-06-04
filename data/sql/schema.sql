@@ -1,0 +1,9 @@
+CREATE TABLE articulo (id_articulo INT AUTO_INCREMENT, nombre CHAR(30) NOT NULL, descripcion CHAR(40) NOT NULL, localidad CHAR(40) NOT NULL, fecha_alta DATE, esta_activo TINYINT NOT NULL, cod_categoria INT, cod_usuario INT, PRIMARY KEY(id_articulo)) ENGINE = INNODB;
+CREATE TABLE categoria (id_categoria INT AUTO_INCREMENT, nombre CHAR(30) NOT NULL, esta_activa TINYINT NOT NULL, PRIMARY KEY(id_categoria)) ENGINE = INNODB;
+CREATE TABLE marca (id BIGINT AUTO_INCREMENT, nombre VARCHAR(255) NOT NULL, fundacion BIGINT, esta_activa TINYINT(1) DEFAULT '1', created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE modelo (id BIGINT AUTO_INCREMENT, nombre VARCHAR(255) NOT NULL, marca_id BIGINT NOT NULL, esta_activo TINYINT(1) DEFAULT '1', created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX marca_id_idx (marca_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE precio_seguro (id BIGINT AUTO_INCREMENT, precio DECIMAL(10, 2) NOT NULL, ccminima BIGINT, ccmaxima BIGINT, combustible VARCHAR(255) NOT NULL, esta_activo TINYINT(1) DEFAULT '1', created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE usuario (id_usuario INT AUTO_INCREMENT, nombre CHAR(30) NOT NULL, email CHAR(40) NOT NULL, fecha_alta DATE, esta_activo TINYINT NOT NULL, password CHAR(10) NOT NULL, PRIMARY KEY(id_usuario)) ENGINE = INNODB;
+CREATE TABLE version (id BIGINT AUTO_INCREMENT, nombre VARCHAR(255) NOT NULL, combustible VARCHAR(255) NOT NULL, cilindrada BIGINT NOT NULL, modelo_id BIGINT NOT NULL, esta_activo TINYINT(1) DEFAULT '1', created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX modelo_id_idx (modelo_id), PRIMARY KEY(id)) ENGINE = INNODB;
+ALTER TABLE modelo ADD CONSTRAINT modelo_marca_id_marca_id FOREIGN KEY (marca_id) REFERENCES marca(id);
+ALTER TABLE version ADD CONSTRAINT version_modelo_id_modelo_id FOREIGN KEY (modelo_id) REFERENCES modelo(id);
