@@ -20,18 +20,24 @@ body
 {
   font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
   background-color: #21610B;
+  color: black;
 }
 /* CABECERA */
 .container { 
   background-color: #FFFFFF;
   font-size:14pt;
   font-style:Arial;
-  color:white;
+ tv
    width: 90%;
   margin: auto;
+ }
+ .contenido{
+  height: 500px;
+  margin-left: 150px;
+ 
 
 
-  }
+ }
 
 #header {
   
@@ -46,7 +52,7 @@ ul#menuHeader li {
 }
 
 ul#menuHeader li a {
-  behavior: url(/css/PIE.htc);
+ 
   border-radius: 10px;
   margin-right: 5px;
   padding: 0px 10px;
@@ -73,21 +79,24 @@ ul#menuHeader li a:hover .enMorado {
 width: 100%;
 
 }
+.contenido{
+height:  500px;
+
+}
+
 
 #headerDerecha {
   position: relative;
   height: 134px;
+  width: 500px;
 }
-
+/*redes sociales*/
 #redesSociales {
     width: 100px;
     height: 30px;
     float: right;
     
-
-
 }
-
 #redesSociales li{
   display: inline;
   list-style-type: none;
@@ -102,6 +111,23 @@ width: 100%;
  
   max-width: 26px;
 }
+/*modulo fotos portada*/
+.preFotos{ height: 250px;}
+ .moduloFotos{width:1000px;}
+ .float{ width:30%; float:left; height:273px; margin-left:25px; text-align: center;}
+ .clear {clear:both;}
+ .float h1{ height:74px;}
+ .fotos{ text-align: center;}
+ .fotos img{border: 1px solid #ddd;margin-bottom: 20px;}
+
+
+.cuerpo{
+  width: auto;
+  height: auto;
+
+}
+
+
 /*ESTILOS DESTACADOS PORTADA*/
 .fotos {
 text-align: center;
@@ -112,4 +138,11 @@ margin-bottom: 20px;
 }
 .fotos h1 {
   color:black;
+}
+
+
+.pie{
+height: 150px;
+background-color: black;
+
 }

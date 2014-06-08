@@ -19,17 +19,17 @@ class ArticuloTable extends Doctrine_Table
 
     public function getActivosBase(){
 
-	return $this->createQuery('Articulo')->where('Articulo.esta_activo=True');
+	return $this->createQuery('Articulo')->where('Articulo.esta_activo=1');
 }
 public function getActivos(){
 
 	return $this->getActivosBase()->execute();
 }
 
-public function getFiltradosPorCategoria($categoria){
+public function getFiltradosPorCategoria($categoriaId){
 
 	return $this->getActivosBase()
-	->andWhere('Articulo.categoria_id='.$categoria->id)
+	->andWhere('Articulo.cod_categoria='.$categoriaId)
 	->execute();
 }//filtrados por categoria
   

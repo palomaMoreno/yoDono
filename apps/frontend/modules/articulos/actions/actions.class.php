@@ -17,6 +17,35 @@ class articulosActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-   $this->articulos=Doctrine::getTable('Articulo')->getActivos();
+    $categoria_id = $request->getParameter('categoria_id');
+    $this->articulos=Doctrine::getTable('Articulo')->getFiltradosPorCategoria($categoria_id);
   }
+
+
+public function executeCrear(sfWebRequest $request)
+  {
+    $this->formulario= new ArticuloForm();
+  
+    $this->id_usuario= $request->getParameter('id_usuario');
+    
+    if ($this->getRequest()->isMethod('post'))
+    {
+        $this->procesarFormulario($request, $this->formulario);
+    }
+  }
+
+ public function procesarFormulario(sfWebRequest $request, sfForm $form)
+ {
+  $form->bind(
+    #me recoge lo enviado en el post
+    $request->getParameter($form->getName()),
+    $request->getFiles($form->getName())
+    );
+  
+  if ($form->isValid())
+    {
+        $form->save();
+    }
+  }//metodo por el si el formulario es valido lo guarda
+
 }

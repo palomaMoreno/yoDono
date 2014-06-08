@@ -19,6 +19,6 @@ class CategoriaTable extends Doctrine_Table
 
   public function getActivas(){
 
-	return $this->createQuery('Categoria')->where('categoria.esta_activa=True')->execute();
-}//creo esta funcion que me devuelve las categorias que estan activas
+	return $this->createQuery('Categoria')->where('esta_activa=1')->execute();
+  }//creo esta funcion que me devuelve las categorias que estan activas
 }

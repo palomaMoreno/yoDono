@@ -32,6 +32,19 @@ public function executeCrear(sfWebRequest $request)
     }
   }//end crear
 
+public function executeConectado(sfWebRequest $request)
+  {
+    $usuarioId = $request->getParameter('usuario_id');
+    $this->usuario = Doctrine::getTable('Usuario')->getUsuarioById($usuarioId);
+    
+    $this->formulario= new UsuarioForm();
+  
+    
+    if ($this->getRequest()->isMethod('post'))
+    {
+        $this->procesarFormulario($request, $this->formulario);
+    }
+  }//end crear
 public function executeEditar(sfWebRequest $request)
   {
     $this->formulario= new UsuarioForm();
