@@ -5,7 +5,7 @@ Code licensed under the BSD License:
 http://developer.yahoo.net/yui/license.txt
 version: 2.6.0
 */
-html{color:#000;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}
+html{color:#000;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:bold;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}
 
 /*
 Fonts CSS
@@ -27,17 +27,14 @@ body
   background-color: #FFFFFF;
   font-size:14pt;
   font-style:Arial;
- tv
    width: 90%;
   margin: auto;
+  height: auto;
  }
- .contenido{
-  height: 500px;
-  margin-left: 150px;
- 
 
-
- }
+#portada img{
+width: 100%;
+}
 
 #header {
   
@@ -75,20 +72,13 @@ ul#menuHeader li a:hover .enMorado {
 }
 
 
-#portada{
-width: 100%;
-
-}
-.contenido{
-height:  500px;
-
-}
-
-
 #headerDerecha {
   position: relative;
-  height: 134px;
+  height: 52px;
   width: 500px;
+}
+.nota{
+  height: 100px;
 }
 /*redes sociales*/
 #redesSociales {
@@ -108,9 +98,18 @@ height:  500px;
    
   width: 26px !important;
   border: 0;
- 
-  max-width: 26px;
+ max-width: 26px;
 }
+.nota{
+
+}
+/**********PORTADA******************/
+
+.descripcion{ height: 150px;}
+.contenido{height:700px;}
+.buscar{height: 100px;
+        width: 400px;}
+
 /*modulo fotos portada*/
 .preFotos{ height: 250px;}
  .moduloFotos{width:1000px;}
@@ -121,11 +120,6 @@ height:  500px;
  .fotos img{border: 1px solid #ddd;margin-bottom: 20px;}
 
 
-.cuerpo{
-  width: auto;
-  height: auto;
-
-}
 
 
 /*ESTILOS DESTACADOS PORTADA*/
@@ -140,9 +134,31 @@ margin-bottom: 20px;
   color:black;
 }
 
-
+/***********PIE**********/
 .pie{
-height: 150px;
+height: 50px;
+width: 90%;
+font-size: 18px;
+margin: auto;
 background-color: black;
 
+}
+.pie p{color: #21610B;
+      text-align: right;}
+/*****************FORM********/
+.form{
+  width:600px;
+  height: 500px;
+  margin-left: 80px;
+  color:white;
+margin-top: 45px; 
+
+}
+.tabla{
+  margin-left: 100px;
+ 
+
+}
+.tabla th,td{
+  padding: 5px;
 }

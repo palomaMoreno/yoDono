@@ -1,3 +1,6 @@
+
   <footer class="pie">
- 	<p> esto es el pie </p>       
+ 	<p> Web realizada en Symfony 1.4-- Paloma Moreno Mayoral--2014--</p>       
+
+
  </footer>

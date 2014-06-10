@@ -42,6 +42,10 @@ class UsuarioTable extends Doctrine_Table
 
         return $usuario;
     }//end login
+      public function setActivo(){
+
+    return $this->setActivo(0)->execute();
+  }
 
     public static function logOut()
     {

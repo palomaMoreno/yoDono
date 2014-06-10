@@ -6773,3 +6773,28 @@ Jun 08 20:30:55 symfony [info] {sfWebDebugLogger} Partial "bloque/_bloqueHeader"
 Jun 08 20:30:55 symfony [info] {sfWebDebugLogger} Component "bloque/bloqueFooter" 0.05 ms (1)
 Jun 08 20:30:55 symfony [info] {sfWebDebugLogger} Partial "bloque/_bloqueFooter" 5.08 ms (1)
 Jun 08 20:30:56 symfony [info] {sfWebResponse} Send content (37123 o)
+Jun 10 21:57:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jun 10 21:57:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 10 21:57:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 10 21:57:20 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jun 10 21:57:20 symfony [info] {sfPHPView} Render "/home/user/public_html/yodonoytodosganamos/apps/frontend/modules/login/templates/indexSuccess.php"
+Jun 10 21:57:21 symfony [info] {sfPHPView} Decorate content with "/home/user/public_html/yodonoytodosganamos/apps/frontend/templates/layout.php"
+Jun 10 21:57:21 symfony [info] {sfPHPView} Render "/home/user/public_html/yodonoytodosganamos/apps/frontend/templates/layout.php"
+Jun 10 21:57:21 symfony [info] {main} Call "bloque->executeBloqueHeader()"
+Jun 10 21:57:21 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 10 21:57:21 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id_categoria AS c__id_categoria, c.nombre AS c__nombre, c.esta_activa AS c__esta_activa FROM categoria c WHERE (c.esta_activa = 1) - ()
+Jun 10 21:57:21 symfony [info] {sfPartialView} Render "/home/user/public_html/yodonoytodosganamos/apps/frontend/modules/bloque/templates/_bloqueHeader.php"
+Jun 10 21:57:21 symfony [info] {main} Call "bloque->executeBloqueFooter()"
+Jun 10 21:57:21 symfony [info] {sfPartialView} Render "/home/user/public_html/yodonoytodosganamos/apps/frontend/modules/bloque/templates/_bloqueFooter.php"
+Jun 10 21:57:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 10 21:57:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 10 21:57:21 symfony [info] {sfWebDebugLogger} Configuration 32.78 ms (13)
+Jun 10 21:57:21 symfony [info] {sfWebDebugLogger} Factories 833.18 ms (1)
+Jun 10 21:57:21 symfony [info] {sfWebDebugLogger} Action "login/index" 0.63 ms (1)
+Jun 10 21:57:21 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 594.18 ms (1)
+Jun 10 21:57:21 symfony [info] {sfWebDebugLogger} Component "bloque/bloqueHeader" 250.27 ms (1)
+Jun 10 21:57:21 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.22 ms (2)
+Jun 10 21:57:21 symfony [info] {sfWebDebugLogger} Partial "bloque/_bloqueHeader" 102.21 ms (1)
+Jun 10 21:57:21 symfony [info] {sfWebDebugLogger} Component "bloque/bloqueFooter" 0.06 ms (1)
+Jun 10 21:57:21 symfony [info] {sfWebDebugLogger} Partial "bloque/_bloqueFooter" 2.37 ms (1)
+Jun 10 21:57:21 symfony [info] {sfWebResponse} Send content (37286 o)

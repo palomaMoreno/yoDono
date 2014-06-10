@@ -32,6 +32,12 @@ public function executeCrear(sfWebRequest $request)
     }
   }//end crear
 
+      public function executeBorrar(sfWebRequest $request)
+  {
+   $this->usuarios=Doctrine::getTable('Usuario')->setActivo();
+  
+  }
+
 public function executeConectado(sfWebRequest $request)
   {
     $usuarioId = $request->getParameter('usuario_id');
